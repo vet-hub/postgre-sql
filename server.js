@@ -17,28 +17,12 @@ app.get('/', (req, res) => {
 
 	The app will now be able to handle requests to /api and /api/user, as well as call the timeLog middleware function that is specific to the route. 
 */
+
 const router = require("./router")			// my router.js
-app.use("/api", router)
+app.use("/api", router)							// by /api -> router
 
 module.exports = app;				// CommonJS modules format
 
 
 
 
-
-/*  default
-
-const express = require('express')
-const app = express()
-const port = 3000
-
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
-
-app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
-
-
-*/
